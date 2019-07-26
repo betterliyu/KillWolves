@@ -1,0 +1,29 @@
+.container {
+  padding: 30rpx;
+}
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-item {
+  width: 33%;
+  flex: 0 0 auto;
+  padding: 10rpx;
+  box-sizing: border-box;
+}
+
+.card-item .img {
+  width: 100%;
+}
+
+.cards-swiper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 40rpx;
+  box-sizing: border-box;
+}

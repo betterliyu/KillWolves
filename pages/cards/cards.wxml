@@ -1,0 +1,26 @@
+<!--logs.wxml-->
+<scroll-view class="container">
+  <view class="actions">
+    <button bindtap="showCardSwiper">小朋友看牌</button>
+  </view>
+  <view class="card-list">
+    <view class="card-item" wx:for="{{cards}}" wx:for-item="card">
+      <image class="img" src="{{card.img}}" mode="widthFix">
+
+      </image>
+    </view>
+  </view>
+  <swiper 
+    class="cards-swiper"  
+    wx:if="{{isSwiperVisible}}"
+    duration="{{300}}">
+    <block wx:for="{{cards}}" wx:for-item="card">
+      <swiper-item  class="cards-swiper-item"  >
+        <image src="{{card.img}}" class="slide-image" mode="widthFix" />
+      </swiper-item>
+    </block>
+    <swiper-item  class="cards-swiper-item"  >
+      <button>游戏开始</button>
+    </swiper-item>
+  </swiper>
+</scroll-view>
